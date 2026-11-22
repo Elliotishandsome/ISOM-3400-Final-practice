@@ -43,8 +43,8 @@ months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 
 selected_months = st.sidebar.multiselect(
     "Select Months",
-    months,
-    default=months
+    dates,
+    default=dates
 )
 
 filtered_months = df[df["Month"].isin(selected_months)]
