@@ -35,4 +35,5 @@ else:
     sales_data = filtered_data.set_index("Month")["Sales"]
     st.line_chart(sales_data)
 
-
+Total_sales = filtered_data["Sales"].sum()
+st.write(f"Total_sales": {Total_sales}")
