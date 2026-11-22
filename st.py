@@ -3,13 +3,11 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-st.write(dates)
 dates = pd.date_range(
     start="2024-01-01",
     end="2024-06-30",
     freq="ME"
 )
-
 st.write(dates)
 df = pd.DataFrame(dates, columns = ["Month"])
 st.write("Dates")
