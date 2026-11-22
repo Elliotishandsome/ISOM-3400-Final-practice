@@ -30,3 +30,7 @@ if show_expense:
 else:
     sales_data = df.set_index("Month")["Sales"]
     st.line_chart(sales_data)
+
+sales_thresold = st.slider("Minimum Sales", 100, 500, 300)
+filtered_data = df[df["Sales"] >= sales_thresold]
+st.write(filtered_data)
