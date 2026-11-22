@@ -9,9 +9,10 @@ dates = pd.date_range(
     freq="ME"
 )
 st.write(dates)
+
 df = pd.DataFrame(dates, columns = ["Month"])
-st.write("Dates")
 st.write(df)
+
 df["Sales"] = np.random.randint(low = 100, high = 500, size = len(dates))
 st.write(df)
 
@@ -20,3 +21,6 @@ st.write(df)
 
 df["Profit"] = df["Sales"] - df["Expenses"]
 st.write(df)
+
+sales_data = df.set_index("Month")["Sales"]
+st.line_chart(sales_data)
