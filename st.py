@@ -24,13 +24,15 @@ st.write(df)
 
 show_expense = st.checkbox("Show Expenses")
 
-if show_expense:
-    comparision_data = df.set_index("Month")[["Sales", "Expenses"]]
-    st.line_chart(comparision_data)
-else:
-    sales_data = df.set_index("Month")["Sales"]
-    st.line_chart(sales_data)
-
 sales_thresold = st.slider("Minimum Sales", 100, 500, 300)
 filtered_data = df[df["Sales"] >= sales_thresold]
 st.write(filtered_data)
+
+if show_expense:
+    comparision_data = df["filtered_data"].set_index("Month")[["Sales", "Expenses"]]
+    st.line_chart(comparision_data)
+else:
+    sales_data = df["filtered_data"].set_index("Month")["Sales"]
+    st.line_chart(sales_data)
+
+
