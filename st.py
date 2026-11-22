@@ -25,5 +25,5 @@ st.write(df)
 sales_data = df.set_index("Month")["Sales"]
 st.line_chart(sales_data)
 
-comparision_data = df.set_index("Month")[["Sales"]["Expenses"]]
+comparision_data = df.set_index("Month")[["Sales"], ["Expenses"]]
 st.line_chart(comparision_data)
