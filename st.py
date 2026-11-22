@@ -4,8 +4,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 dates = pd.date_range(
-    start="Jan",
-    end="June",
+    start="2024-01-01",
+    end="2024-06-31",
     freq="ME"
 )
 st.write(dates)
