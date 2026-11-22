@@ -29,10 +29,10 @@ filtered_data = df[df["Sales"] >= sales_thresold]
 st.write(filtered_data)
 
 if show_expense:
-    comparision_data = df["filtered_data"].set_index("Month")[["Sales", "Expenses"]]
+    comparision_data = filered_data.set_index("Month")[["Sales", "Expenses"]]
     st.line_chart(comparision_data)
 else:
-    sales_data = df["filtered_data"].set_index("Month")["Sales"]
+    sales_data = filtered_data.set_index("Month")["Sales"]
     st.line_chart(sales_data)
 
 
