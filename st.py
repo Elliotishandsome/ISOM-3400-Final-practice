@@ -37,3 +37,12 @@ else:
 
 Total_sales = filtered_data["Sales"].sum()
 st.write(f"Total_sales: {Total_sales}")
+
+months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+
+selected_months = st.sidebar.multiselect(
+    "Select Months",
+    months,
+    default=months
+)
