@@ -22,8 +22,11 @@ st.write(df)
 df["Profit"] = df["Sales"] - df["Expenses"]
 st.write(df)
 
-sales_data = df.set_index("Month")["Sales"]
-st.line_chart(sales_data)
+show_expense = st.checkbox("Show Expenses")
 
-comparision_data = df.set_index("Month")[["Sales", "Expenses"]]
-st.line_chart(comparision_data)
+if show_expense:
+    comparision_data = df.set_index("Month")[["Sales", "Expenses"]]
+    st.line_chart(comparision_data)
+else:
+    sales_data = df.set_index("Month")["Sales"]
+    st.line_chart(sales_data)
