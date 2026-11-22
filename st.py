@@ -46,3 +46,6 @@ selected_months = st.sidebar.multiselect(
     months,
     default=months
 )
+
+filtered_months = df[df["Month"].isin(selected_months)]
+st.write(filtered_months)
