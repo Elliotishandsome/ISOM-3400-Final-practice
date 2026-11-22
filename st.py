@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 dates = pd.date_range(
     start="2024-01-01",
-    end="2024-06-31",
+    end="2024-06-30",
     freq="ME"
 )
 st.write(dates)
